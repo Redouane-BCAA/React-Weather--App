@@ -39,7 +39,7 @@ export default function CurrentWeatherCard({ weather }) {
   return (
     <div className="current_weather_container">
       <h2 className="current_weather_title">
-        Current weather in {weather.name} <i className="ri-map-pin-2-line"></i>
+        Current weather in {weather.name}, {weather.sys.country} <i className="ri-map-pin-2-line"></i>
       </h2>
 
       <img src={iconSource} alt="Weather Icon" />
