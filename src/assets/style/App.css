@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Montserrat&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: 'Bubblegum Sans', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: url(/src/assets/images/sky.jpg);
+  background-position: top;
+}
+#root{
+  width: 95%;
+  max-width: 600px;
+  min-width: 300px;
+  --title-color : rgb(1, 25, 160) ;
+}
+
+/* STYLE APP WEATHER */
+.weather-container{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  backdrop-filter: blur(10px);
+  opacity: 0.75;
+  border-radius: 20px;
+  border: 2px solid white;
+
+  & h1{
+    position: relative;
+    text-align: center;
+    font-size: 45px;
+    z-index: 1000;
+    color: rgb(1, 25, 160);
+    & img{
+      position: absolute;
+      top: -76px;
+      right: -20px;
+      z-index: -1;
+      width: 145px;
+    }
+  }
+  & a{
+    color: white;
+  }
+}
+/* SEARCH BAR */
+.search-bar{
+  border-radius: 20px;
+  border: 3px solid white;
+
+  & input, button{
+    height: 40px;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    outline: none;
+    background-color: transparent;
+    border-radius: 17px 0 0 17px;
+    color: white;
+  }
+  & input::placeholder{
+    color: white;
+  }
+  & button{
+    & i{
+      padding: 5px;
+      color: white;
+      font-weight: 800;
+    }
+    & i:hover{
+      cursor: pointer;
+      transform: scale(5);
+    }
+  }
+}
+
+/* CURRENT WEATHER CSS */
+.current_weather_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 100%;
+  padding: 15px 0px 15px 0px;
+  color: white;
+  gap: 20px;
+  border: 2px solid white;
+
+  & h2{
+    color: white;
+  }
+  & img{
+    width: 90px;
+  }
+  & h3{
+    font-size: 50px;
+    color: white;
+  }
+  & p{
+    font-size: 20px;
+  }
+  & .temperature-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+
+    & p{
+      font-size: 18px;
+      padding: 5px 10px;
+      border-radius: 20px;
+      background-color: white;
+      opacity: 0.9;
+      color: var(--title-color);
+    }
+  }
+}
+
+/* NEXT DAYS SECTION */
+
+.next-days-section{
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--title-color);
+  width: 100%;
+
+  .next-days-title{
+    font-size: 25px;
+    text-align: center;
+    color: white;
+  }
+
+  .next-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+  }
+  .next-days-card{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    width: 17%;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding-bottom: 15px;
+
+    & img{
+      padding-top: 5px;
+      width: 40px;
+    }
+    & p{
+      font-size: 15px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .temp{
+      margin-top: 10px;
+      font-size: 20px;
+    }
+  }
+}
